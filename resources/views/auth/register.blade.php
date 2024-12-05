@@ -25,7 +25,7 @@
         }
 
         h1 {
-            font-family: "Rubik Mono One", monospace;
+            font-family: "Francois One", sans-serif;
             text-transform: uppercase;
             font-style: normal;
             color: #FEEE91;
@@ -67,18 +67,18 @@
         }
 
         .welcome {
-            font-family: "Rubik Mono One", monospace;
-            font-weight: 700;
+            font-family: "Francois One", sans-serif;
+            font-weight: 1000;
             font-style: normal;
             color: #FEEE91;
-            font-size: 500px;
+            font-size: 55px;
         }
     </style>
 </head>
 
 <body class="flex h-screen">
     <div class="w-1/2 bg-gray-900 text-white flex flex-col justify-center items-center p-8">
-        <div class="w-full max-w-md bg-gray-800 p-8 rounded-lg shadow-lg">
+        <div class="w-full max-w-md bg-[#789DBC] p-8 rounded-lg shadow-lg bg-opacity-50">
             <h1 class="text-3xl font-bold mb-4">Register</h1>
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -119,7 +119,7 @@
     </div>
     <div class="w-1/2 bg-#789DBC-800 flex flex-col justify-center items-center p-8">
         <div class="text-center">
-            <h1 class="welcome text-6xl font-bold text-#FEEE91 mb-4">Welcome to</h1>
+            <h1 class="welcome  font-bold text-#FEEE91 mb-4">Sign up and start exploring jobs</h1>
         </div>
         <div class="mt-8">
             <img alt="jobquest logo" height="500" src="assets/logo.gif" width="500" />

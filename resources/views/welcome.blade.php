@@ -50,36 +50,19 @@
             </nav>
         </div>
     </header>
-
-    <header class="relative h-screen">
-        <img alt="Background image of a modern office with people collaborating"
-            class="absolute inset-0 w-full h-full object-cover z-0" height="1080"
-            src="https://storage.googleapis.com/a1aa/image/xx0InQX4nQLWGJIl2EfluBP0P1bjC9K5MhtkaSfey9xBECvnA.jpg"
-            width="1920" />
-        <div class="relative z-10 bg-black bg-opacity-5 h-full">
-            <main class="relative py-40" id="dynamic-bg">
-                <div class="absolute inset-0 bg-black opacity-50">
-                </div>
-                <div class="container mx-auto flex items-center relative z-10">
-                    <div class="w-full text-center">
-                        <h2 class="text-5xl font-bold text-white leading-tight bg-opacity-75 inline-block p-4 rounded">
-                            <span class="block text-8xl">
-                                Opportunity is
-                            </span>
-                            <span class="block text-8xl">
-                                wherever you are.
-                            </span>
-                            <span class="block text-2xl mt-4">
-                                We're connecting the best talent with the best companies
-                            </span>
-                        </h2>
-                        <div class="mt-8 flex justify-center space-x-4">
-                        </div>
-                    </div>
-                </div>
-            </main>
+    <main class="bg-blue-50 py-40" id="dynamic-bg"
+        style="background: url('{{ asset('assets/background.gif') }}') no-repeat center center fixed; background-size: cover;">
+        <div class="container mx-auto flex items-center ">
+            <div class="w-full text-center">
+                <h2 class="text-5xl font-bold text-blue leading-tight bg-opacity-75 inline-block p-4 rounded">
+                    <span class="block text-8xl animated-text">Opportunity is</span>
+                    <span class="block text-8xl animated-text">wherever you are.</span>
+                    <span class="block text-2xl mt-4 animated-text">We're connecting the best talent with the
+                        best companies</span>
+                </h2>
+            </div>
         </div>
-    </header>
+    </main>
     <footer class="bg-white py-6">
         <div class="container mx-auto text-center">
             <p class="text-gray-700">
