@@ -440,7 +440,7 @@
                                 <span class="bg-green-100 text-green-700 px-2 py-1 rounded mr-2">${job.jobType}</span>
                                 <span class="bg-red-100 text-red-700 px-2 py-1 rounded">${job.urgency}</span>
                             </div>
-                            <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                            <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                                 Apply
                             </button>
                         `;
@@ -453,15 +453,21 @@
         }
 
 
-
         function applyJob() {
-            window.open('application.html', '_blank');
+            const isLoggedIn = false;
+
+            if (!isLoggedIn) {
+                alert('Please sign in to apply for this job.');
+                window.location.href = '{{ route('find-jobs') }}';
+            } else {
+                window.open('application.html', '_blank');
+            }
         }
 
     </script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-blue-200">
     <header class="bg-white shadow-md">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="flex items-center">
@@ -639,7 +645,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -686,7 +692,7 @@
                                 Hiring soon
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -733,7 +739,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -779,7 +785,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -825,7 +831,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -871,7 +877,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -917,7 +923,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -965,7 +971,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -1073,7 +1079,7 @@
                     <p id="job-posted">
                         Posted 5 mins ago
                     </p>
-                    <button class="bg-blue-500 text-white p-2 rounded-lg mt-4 w-full" onclick="applyJob()">
+                    <button class="bg-pink-500 text-white p-2 rounded-lg mt-4 w-full" onclick="applyJob()">
                         Apply
                     </button>
                 </div>

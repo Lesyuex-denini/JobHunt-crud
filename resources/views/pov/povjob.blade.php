@@ -440,7 +440,7 @@
                                 <span class="bg-green-100 text-green-700 px-2 py-1 rounded mr-2">${job.jobType}</span>
                                 <span class="bg-red-100 text-red-700 px-2 py-1 rounded">${job.urgency}</span>
                             </div>
-                            <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                            <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                                 Apply
                             </button>
                         `;
@@ -455,13 +455,13 @@
 
 
         function applyJob() {
-            window.open('application.html', '_blank');
+            window.open('{{ route('application.create') }}', '_blank');
         }
 
     </script>
 </head>
 
-<body class="bg-gray-100">
+<body class="font-roboto bg-blue-200 color-white">
     <header class="bg-white shadow-md">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
             <div class="flex items-center">
@@ -478,14 +478,14 @@
                 <a class="text-gray-700 hover:text-pink-500" href="{{ url('blogspov') }}">Blogs</a>
                 <div class="relative">
                     <button id="menuButton"
-                        class="flex items-center text-gray-700 hover:text-pink-500 focus:outline-none"
-                        onclick="window.location.href='{{ route('pov.userpov') }}'">
+                        class="flex items-center text-gray-700 hover:text-pink-500 focus:outline-none">
                         <span class="mr-2">{{ Auth::user()->name }}</span>
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div id="dropdownMenu"
                         class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg hidden">
-                        <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="#">Applications</a>
+                        <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                            href="{{ route('status') }}">Status</a>
                         <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             Logout
@@ -620,7 +620,7 @@
 
         <div class="mt-4 flex space-x-2">
             <div class="w-1/3">
-                <h2 class="text-xl font-bold">
+                <h2 class="text-xl font-bold text-[#171f2e]">
                     Job results
                 </h2>
                 <div class="scrollable mt-2">
@@ -666,7 +666,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -713,7 +713,7 @@
                                 Hiring soon
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -760,7 +760,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -806,7 +806,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -852,7 +852,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -898,7 +898,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -944,7 +944,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -992,7 +992,7 @@
                                 Urgently hiring
                             </span>
                         </div>
-                        <button class="bg-blue-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
+                        <button class="bg-pink-500 text-white p-1 rounded-lg mt-2 w-full" onclick="applyJob()">
                             Apply
                         </button>
                     </div>
@@ -1100,7 +1100,7 @@
                     <p id="job-posted">
                         Posted 5 mins ago
                     </p>
-                    <button class="bg-blue-500 text-white p-2 rounded-lg mt-4 w-full" onclick="applyJob()">
+                    <button class="bg-pink-500 text-white p-2 rounded-lg mt-4 w-full" onclick="applyJob()">
                         Apply
                     </button>
                 </div>
